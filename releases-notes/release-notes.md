@@ -1,6 +1,23 @@
 # space-game-releases
 
 ## preAlpha-releases
+#### 0.1.0
+This release brings quite a lot of changes to the game. Firstly the first parts of the UI are reworked to not look that plane as before. Most of the UI Frames are with a transparency to look more natural in the Scene. 
+The second changes are obstacles that are applied to the space station. Character avoid walking to tiles that are blocked by obstacles. You can click on the obstacles to remove them. Currently they are quite expensive and not balanced with the reward you get from the missions.
+
+Additional changes:
+* New prefab for the obstacles
+* introduced 4 new materials that are needed for character upgrades
+* patricles are spawned on earning coins
+
+##### Release reason
+The Reason for this release is to gether feedback about the new desinged UI and also about the obstacles.
+
+##### Known problems
+* clicking the new arrow on the cutscene is only working in the corner
+* The UI panel for removing the obstacles is a bit too smal and has floating buttons
+
+
 #### 0.0.8
 This release will bring the following improvements
 
