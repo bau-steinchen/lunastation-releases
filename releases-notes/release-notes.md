@@ -1,6 +1,31 @@
 # space-game-releases
 
 ## preAlpha-releases
+#### 0.1.2
+The changes in this release bring some changes that are needed for the future work of the game. The biggest change is the station designer and the abbility to buy rooms on the station. The room can be bought with the station designer after you reached level 3. This level enable also the first room (Canteen) that can be bought. In the station designer you see colored tiles that are defining the states of the station tile underneath.
+Note: You need to remove obstacles to have free spaces where the rooms can be applied to.
+
+* gray - This is the command bridge and cannot be changed at all.
+* red - This tile is blocked by an obstacle you need to remove it first.
+* yellow - This tile is free and you can buy a room on this tile.
+* green - This tile already has a room on it's tile. Buying a new room will override the old one.
+* The elevator will stay unchanged in the station designer.
+
+For this changes i need to rewrite the most parts of the current tilemap that is used for the space station. The tilemap is now organized in layers that are currently ssplit into Obstacle, Movable(where characters and so can move), Station and a background that is not used currently.
+
+Besides this changes during the work for this release i managed to use a new website design to build a more general website that also include some more topics beside the gamedevelopment. As for now it is still in progress and some of it contents is non existent for now but i'm quite happy with the progress and the new look. If youre interested check it out under [bau.steinchen website](http://bau-steinchen.duckdns.org/)
+
+##### Release reason
+After a long time of development i will bring the newest changes of the game to show the progress and new features.
+
+##### Known problems
+* clicking the new arrow on the cutscene is only working in the corner
+* The UI panel for removing the obstacles is a bit too smal and has floating buttons
+* clicking on the button to remove the obstacles could open the panel of the obstacle behind it
+* clicking to apply a room on the space station could open other panels.
+* applying a room to a tile where already a room is will override the current room
+
+
 #### 0.1.0
 This release brings quite a lot of changes to the game. Firstly the first parts of the UI are reworked to not look that plane as before. Most of the UI Frames are with a transparency to look more natural in the Scene. 
 The second changes are obstacles that are applied to the space station. Character avoid walking to tiles that are blocked by obstacles. You can click on the obstacles to remove them. Currently they are quite expensive and not balanced with the reward you get from the missions.
@@ -8,7 +33,7 @@ The second changes are obstacles that are applied to the space station. Characte
 Additional changes:
 * New prefab for the obstacles
 * introduced 4 new materials that are needed for character upgrades
-* patricles are spawned on earning coins
+* particles are spawned on earning coins
 
 ##### Release reason
 The Reason for this release is to gether feedback about the new desinged UI and also about the obstacles.
