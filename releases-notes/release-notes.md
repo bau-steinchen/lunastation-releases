@@ -1,6 +1,34 @@
 # space-game-releases
 
 ## preAlpha-releases
+#### 0.1.3
+As i was worrying about the gameplay fun on my game I decided to create a prototype that contains most of the core mechanics that I wanted to implement. This will be released on itch.io to see how other players feel the gameplay. I hope i get a lot of valuable feedback out of this that i can go back into the extension of the game progressions.    
+Beside this release on itch.io this release contain multiple things that i manage to implement already. First of all for a more appealing look i created a boarder around the space station that i feel more realistic not only cards sticked together.
+Also i implemented a new background handler that is not interfering with the station itself. I still need to do this for the planet that is behind the station. For example if you zoom out the plance shrink aswell.
+Also i started to implement the bonus functionality that you can gain by added new rooms on the space station. The basics are done and already taking into account e.g. if you finish an mission the bonus will increase your earned coinvalue.
+Removing obstacles is now blocked behind reaching level 1.
+
+Some smaler updates are:   
+* Creating new elevator handler for fixing the glitched doors
+* Removing lots of unnecessary debug logoutput and general code cleanup
+* Fixed clicking panels that ore opening panels from objects behind the current panel
+* Dive deeper in particles and create a stars effect for the login screen
+* Updated API models to also save/load data like profession etc 
+* Missions also add EP to the character
+* Reimplement Event handling in a more generic way (your coins already updated unsing this handler)
+* Adapt some of the panels to be closed when clicked outside of the panel
+
+Besides this changes during the work for this release im still improving my website. As for now most of the content is still in progress and some might not exist at all. But if youre interested check it out under [bau.steinchen website](http://bau-steinchen.duckdns.org/)
+
+##### Release reason
+Its a new year (2023) and this brings a lot new motivations to start with tasks i was struggleing with. But also there are new worries about the gameplaymechanics so i decided to create a prototype release for itch.io
+
+##### Known problems
+* clicking the new arrow on the cutscene is only working in the corner
+* The UI panel for removing the obstacles is a bit too smal and has floating buttons
+* applying a room to a tile where already a room is will override the current room
+
+
 #### 0.1.2
 The changes in this release bring some changes that are needed for the future work of the game. The biggest change is the station designer and the abbility to buy rooms on the station. The room can be bought with the station designer after you reached level 3. This level enable also the first room (Canteen) that can be bought. In the station designer you see colored tiles that are defining the states of the station tile underneath.
 Note: You need to remove obstacles to have free spaces where the rooms can be applied to.
