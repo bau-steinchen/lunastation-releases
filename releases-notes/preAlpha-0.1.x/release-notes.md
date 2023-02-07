@@ -1,6 +1,37 @@
 # space-game-releases
 
 ## preAlpha-releases
+
+#### 0.1.4
+As I'm planning out my prototype for itch.io i noted down the most things i want to be inside a release when i publish it on itch.io.
+This brings also a lot of rework of the old code, most of the this are now quite better than before because I'm much more into things and how they should be used. One example here is the use of the Eventsystem. As i have an generic way of using Events for certain things i keep simplyfying the code and decoupling the gameobjects by using events to notify about changes. And as i was lerning Unity my code from the beginning was a huge chain of dependencies which are now just one Event from one GameObject to another whitout providing the GameObject to all Object that need to get notified of data from for example the userdata.
+
+The things to highlight that are new in this Release are:
+* With the use of events i Created a generic timerobject that can perform many different timer related parts by only usig events.
+* The Cutscene is now fully clickable to get to the next page and there is no need to click on an arrow button
+* The same counts for the LevelUp UI it has now a fullscreen button in the back to close the UI with any touch
+* The UI panel when clicked on an obstackle are now using the full screen hight and not being too small for the buttons in them
+* The space station now shows the bonus you get for certain values when youre inside the station designer
+* Rewriting the complete Network funktionalties to use the UnityWebRequest module as the http Modulse is deprecated and blocking processes
+* To reduce the nework calls the mission of the characters are now defined as scriptableobjects and stored inside unity as they where static 
+* A new button is on the screen for providing direct feedback
+* After registration you are now directly loged in and forwarded to the cutscene
+* A new button is added to handle special missions for the characters (Special missions are as well a scriptable object)
+
+Also some small changes like:
+* Panelsize for clickable objects are adapted to be more intuitive
+* The tutorial now overlaps the hole screen
+* EP values for level ups are changed a bit to be not faster then the ressources to get (rooms unlocked but not able to have enough money to buy them)
+
+
+Besides this changes during the work for this release im still improving my website. As for now most of the content is still in progress and some might not exist at all. But if youre interested check it out under [bau.steinchen website](http://bau-steinchen.duckdns.org/)
+
+##### Release reason
+Alot of things happened during the preparation for the itch.io release and this progress should be reflected in the releses
+
+##### Known problems
+* applying a room to a tile where already a room is will override the current room
+
 #### 0.1.3
 As i was worrying about the gameplay fun on my game I decided to create a prototype that contains most of the core mechanics that I wanted to implement. This will be released on itch.io to see how other players feel the gameplay. I hope i get a lot of valuable feedback out of this that i can go back into the extension of the game progressions.    
 Beside this release on itch.io this release contain multiple things that i manage to implement already. First of all for a more appealing look i created a boarder around the space station that i feel more realistic not only cards sticked together.
@@ -70,63 +101,3 @@ The Reason for this release is to gether feedback about the new desinged UI and 
 * clicking the new arrow on the cutscene is only working in the corner
 * The UI panel for removing the obstacles is a bit too smal and has floating buttons
 
-
-#### 0.0.8
-This release will bring the following improvements
-
-* Introduces an new text font that is used in the game now with a pixelated style
-* a basic shop design is introduced and will be used to gather feedback until the finishing up with graphics and images
-
-##### Release reason
-The Reason for this release was to gather feedback about the basic functionality of the shop and the new pixelated font style.
-
-
-#### 0.0.6
-This release give the player the opportunity to save his user data to server
-
-* and into text is showing that it using a development build
-* the intro is only shown for the first startup of a new registered member
-* currently only one character is usable for the user
-* a mission that is not finished when closing the app will be changed and the reward will be provided on the next login
-
-There need to be some changes made in the back-end to provide more flexible characters in the future. The current test characters are hard-coded
-
-##### Release reason
-The gameEngine is basically finished and open for feedback. The Shop and the Space station not finished.
-
-#### 0.0.4
-This release has multiple bugfixes that are gathered from the feedback.
-The main bugfixes are:
-
-* removed Userlevel from userdata and calculate via current ep
-* only 2 characters where allowed to entered for passwords
-* different problems in the communication with the database trough the API
-* improving the error messages shown to user when API call failed
-
-In addition to the bugfixes the app get some new features.
-The main features are:
-
-* A complete new scene that can show cutscenes to introduce story telling
-* The API get a new route to handle cutscenes with text, image and an image for speaker
-* The http Request module is using the dns name to the server now that make the app access the API from outside of the local network
-* Refactor and delete old unused code that can cause confusion for different type of implementations
-
-##### Release reason
-The main reason for releasing this version is to get feedback about the registration and the new cutscene because with the dns included other people can give their feedback too. They do not need to be part of my local network anymore.
-
-#### 0.0.1
-##### First Release
-This release is the very initial first release to test basis behavior on mobile devices.
-
-The main features are:
-* Login
-* Register of new Users
-* Userdata is saved to the server
-* Userdata is loaded from server
-* Simple space station is in place
-* 2 dummy character walking around in the space station
-* The character have dummy missions to be started
-* Gaining xp and coins for the user through character missions
-
-##### Release reason
-* The main reason for this release is to gather some feedback and test the app on mobile devices
