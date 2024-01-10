@@ -1,4 +1,4 @@
-# space-game-releases
+# lunastation-releases
 
 ## preAlpha-releases
 
@@ -11,6 +11,9 @@ Features and Fixes:
 * The touch input on mobile devices are fixed by using event trigger instead of onClick (e.g. mouse clicks) 
 * Special Missions are again usable with the characters directly from special mission menu
 * Increasing the mission reward to better allign with the level ups and the new features that are needing coins
+* Loading a game update the concurrent Mission panel to the correct number
+* Fix the problem that loading with an active special Mission set the remaining mission timer as cooldown
+* The Missions are no longer stored in the database, from now on as scriptable objects
 
 Release reason
 Restored after dataloss on a new powerfull server and small fixes for the mobile version
